@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "./lib",
+      "strict": true,
+      "lib": ["es2015", "dom"],
+      "types": ["node","jest"]
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "**/tests/*"]
+  }

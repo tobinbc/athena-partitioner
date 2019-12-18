@@ -1,0 +1,49 @@
+{
+  "name": "@tobinbc/chunker",
+  "version": "1.1.1",
+  "description": "Tiny function to split an array into chunks, returned as an array of arrays",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tobinbc/chunker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobinbc/chunker/issues"
+  },
+  "homepage": "https://github.com/tobinbc/chunker#readme",
+  "keywords": [
+    "chunk",
+    "array",
+    "aws",
+    "sdk",
+    "split"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.20",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "lib/**/*",
+    "*.json"
+  ],
+  "author": "Tobin Chew",
+  "license": "MIT"
+}
